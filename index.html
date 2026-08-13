@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinéMatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <h1>CinéMatch</h1>
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Rechercher un film...">
+            </div>
+            <button id="favorites-btn" class="favorites-btn">
+        <i class="fa-solid fa-heart"></i> Favoris <span id="fav-count" class="fav-badge">0</span>
+        </button>
+        </div>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main class="main-content">
+        <!-- Section Catalogue / Tendances -->
+        <section>
+            <h2>Films populaires</h2>
+            <div id="movies-grid" class="movies-grid">
+                <!-- Les cartes de films s'injecteront ici -->
+            </div>
+        </section>
+
+        <!-- Section Favoris -->
+        <section id="favorites-section" style="display: none; margin-top: 3rem;">
+            <div class="section-header">
+                <h2>Mes Films Favoris</h2>
+                <button id="back-to-popular" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux films
+                </button>
+            </div>
+            <div id="favorites-grid" class="movies-grid">
+                <!-- Les films favoris s'injecteront ici -->
+            </div>
+        </section>
+    </main>
+
+   <!-- Modale de détails du film -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal">&times;</button>
+            <div id="modal-body">
+                <!-- Les détails complets s'injecteront ici -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
