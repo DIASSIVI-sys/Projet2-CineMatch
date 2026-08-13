@@ -14,6 +14,12 @@ const favCount = document.getElementById("fav-count");
 const movieModal = document.getElementById("movie-modal");
 const modalBody = document.getElementById("modal-body");
 const closeModal = document.getElementById("close-modal");
+const backToPopularBtn = document.getElementById("back-to-popular");
+
+// Au clic sur le bouton retour, on revient aux films populaires
+backToPopularBtn.addEventListener("click", () => {
+    fetchPopularMovies();
+});
 
 let currentView = "popular"; // Permet de savoir si on affiche les populaires/recherche ou les favoris
 
