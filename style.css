@@ -146,6 +146,7 @@ body {
     background-color: #dc3545; /* Note < 5 */
 }
 
+
 .movie-info {
     padding: 1rem;
     display: flex;
@@ -174,4 +175,125 @@ body {
     font-size: 1.2rem;
     padding: 3rem;
     color: #aaa;
+}
+/* --- Bouton Favori (Cœur) sur la carte --- */
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 2;
+}
+
+.favorite-btn:hover {
+    background-color: rgba(229, 9, 20, 0.8);
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    color: #e50914;
+}
+
+/* --- Style de la Modale --- */
+.modal {
+    display: none; /* Masquée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-details {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.modal-details img {
+    width: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal-info h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    padding: 0;
+}
+
+.modal-info p {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.modal-genres {
+    display: flex;
+    gap: 8px;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.genre-tag {
+    background-color: #333;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: #e50914;
+}
+
+@media (max-width: 600px) {
+    .modal-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-details img {
+        width: 100%;
+        max-height: 350px;
+    }
 }
