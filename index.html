@@ -17,8 +17,8 @@
                 <input type="text" id="search-input" placeholder="Rechercher un film...">
             </div>
             <button id="favorites-btn" class="favorites-btn">
-                <i class="fa-solid fa-heart"></i> Favoris (<span id="fav-count">0</span>)
-            </button>
+        <i class="fa-solid fa-heart"></i> Favoris <span id="fav-count" class="fav-badge">0</span>
+        </button>
         </div>
     </header>
 
@@ -32,9 +32,14 @@
             </div>
         </section>
 
-        <!-- Section Favoris (Optionnelle / Masquée ou affichée dynamiquement) -->
+        <!-- Section Favoris -->
         <section id="favorites-section" style="display: none; margin-top: 3rem;">
-            <h2>Mes Films Favoris</h2>
+            <div class="section-header">
+                <h2>Mes Films Favoris</h2>
+                <button id="back-to-popular" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux films
+                </button>
+            </div>
             <div id="favorites-grid" class="movies-grid">
                 <!-- Les films favoris s'injecteront ici -->
             </div>
